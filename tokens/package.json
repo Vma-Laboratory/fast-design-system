@@ -1,0 +1,20 @@
+{
+  "name": "design-tokens",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build-transform-global": "npx token-transformer figma/tokens.json figma/output/global.json global",
+    "build-transform-light": "npx token-transformer figma/tokens.json figma/output/light.json global,light,theme --resolveReferences=false",
+    "build-transform-dark": "npx token-transformer figma/tokens.json figma/output/dark.json global,dark,theme  --resolveReferences=false",
+    "build-transform-all": "npx token-transformer figma/tokens.json figma/output/all.json global,light,theme --resolveReferences=false",
+    "build-transform": "npm run build-transform-global && npm run build-transform-light && npm run build-transform-dark && npm run build-transform-all",
+    "build-styles": "npm run build-transform && node style-token.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@microsoft/fast-foundation": "^3.0.0-alpha.28",
+    "style-dictionary": "^3.8.0",
+    "token-transformer": "^0.0.33"
+  }
+}
