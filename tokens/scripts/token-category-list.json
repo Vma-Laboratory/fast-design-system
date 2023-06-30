@@ -1,0 +1,29 @@
+[
+  {
+    "categoryName": "colors",
+    "categoryTypeName": "GlobalColors",
+    "tokenTypes": ["color"]
+  },
+  {
+    "categoryName": "typography",
+    "categoryTypeName": "Typography",
+    "tokenTypes": [
+      "paragraphSpacing",
+      "letterSpacing",
+      "fontFamilies",
+      "fontWeights",
+      "lineHeights",
+      "fontSizes"
+    ]
+  },
+  {
+    "categoryName": "borders",
+    "categoryTypeName": "Borders",
+    "tokenTypes": ["borderWidth", "borderRadius"]
+  },
+  {
+    "categoryName": "spacings",
+    "categoryTypeName": "Spacings",
+    "tokenTypes": ["dimension", "spacing"]
+  }
+]
