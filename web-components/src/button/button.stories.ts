@@ -27,7 +27,7 @@ export default {
   title: "Components/Button",
   tags: ['autodocs'],
   args: {
-    content: "Button",
+    content: "BUTTON",
     disabled: false,
     disabledFocusable: false,
   },

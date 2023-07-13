@@ -1,56 +1,63 @@
 import { css } from "@microsoft/fast-element";
 import { display } from "@microsoft/fast-foundation";
+import {
+  fpsfaThemeOnPrimaryContainer,
+  fpsfaThemePrimaryContainer,
+  fpsfaFontFamiliesBody,
+  fpsfaFontSizesBody,
+  fpsfaFontWeightsBodyBold,
+  fpsfaThemePrimaryFixed,
+  fpsfaThemePrimaryFixedDim,
+  fpsfaThemeButtonFilledPressed,
+  fpsfaThemeButtonOutlinePressed
+} from "@design-system/tokens";
 
 // Need to support icon hover styles
 export const styles = css`
   ${display("inline-flex")}
-`;
-// :host {
-//   --icon-spacing: ${spacingHorizontalSNudge};
-//   contain: layout style;
-//   vertical-align: middle;
-// }
 
-// :host .control {
-//   display: inline-flex;
-//   align-items: center;
-//   box-sizing: border-box;
-//   justify-content: center;
-//   text-decoration-line: none;
-//   margin: 0;
-//   min-height: 32px;
-//   outline-style: none;
-//   background-color: ${colorNeutralBackground1};
-//   color: ${colorNeutralForeground1};
-//   border: ${strokeWidthThin} solid ${colorNeutralStroke1};
-//   padding: 0 ${spacingHorizontalM};
-//   min-width: 96px;
-//   border-radius: ${borderRadiusMedium};
-//   font-size: ${fontSizeBase300};
-//   font-family: ${fontFamilyBase};
-//   font-weight: ${fontWeightSemibold};
-//   line-height: ${lineHeightBase300};
-//   transition-duration: ${durationFaster};
-//   transition-property: background, border, color;
-//   transition-timing-function: ${curveEasyEase};
-//   cursor: pointer;
-// }
+  :host {
+    contain: layout style;
+    vertical-align: middle;
+  }
+
+  :host .control {
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+    text-decoration-line: none;
+    margin: 0;
+    min-height: 32px;
+    outline-style: none;
+    background-color: ${fpsfaThemePrimaryContainer};
+    color: ${fpsfaThemeOnPrimaryContainer};
+    border: 0 solid transparent;
+    padding: 1.25rem 3.25rem;
+    min-width: 96px;
+    border-radius: 1rem;
+    font-size: ${fpsfaFontSizesBody};
+    font-family: ${fpsfaFontFamiliesBody};
+    font-weight: ${fpsfaFontWeightsBodyBold};
+    cursor: pointer;
+  }
+
+  :host(:hover) .control {
+    background-color: ${fpsfaThemePrimaryFixedDim};
+    color: ${fpsfaThemePrimaryFixed};
+    border-color: transparent;
+  }
+
+  :host(:hover:active) .control {
+    background-color: ${colorNeutralBackground1Pressed};
+    border-color: ${colorNeutralStroke1Pressed};
+    color: ${colorNeutralForeground1Pressed};
+    outline-style: none;
+  }
+`;
 
 // .content {
 //   display: inherit;
-// }
-
-// :host(:hover) .control {
-//   background-color: ${colorNeutralBackground1Hover};
-//   color: ${colorNeutralForeground1Hover};
-//   border-color: ${colorNeutralStroke1Hover};
-// }
-
-// :host(:hover:active) .control {
-//   background-color: ${colorNeutralBackground1Pressed};
-//   border-color: ${colorNeutralStroke1Pressed};
-//   color: ${colorNeutralForeground1Pressed};
-//   outline-style: none;
 // }
 
 // :host .control:focus-visible {
