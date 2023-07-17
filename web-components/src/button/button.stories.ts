@@ -82,10 +82,10 @@ export const Button = renderComponent(storyTemplate).bind({});
 
 export const Appearance = renderComponent(html<ButtonStoryArgs>`
   <fpsfa-button>Default</fpsfa-button>
-  <fpsfa-button appearance="primary">Primary</fpsfa-button>
+  <fpsfa-button appearance="filled">Filled</fpsfa-button>
   <fpsfa-button appearance="outline">Outline</fpsfa-button>
-  <fpsfa-button appearance="subtle">Subtle</fpsfa-button>
-  <fpsfa-button appearance="transparent">Transparent</fpsfa-button>
+  <fpsfa-button appearance="ghost">Ghost</fpsfa-button>
+  <fpsfa-button appearance="text">Text</fpsfa-button>
 `);
 
 export const Shape = renderComponent(html<ButtonStoryArgs>`
@@ -200,9 +200,9 @@ export const Disabled = renderComponent(html<ButtonStoryArgs>`
   <fpsfa-button>Enabled state</fpsfa-button>
   <fpsfa-button disabled>Disabled state</fpsfa-button>
   <fpsfa-button disabled-focusable>Disabled focusable state</fpsfa-button>
-  <fpsfa-button appearance="primary">Enabled state</fpsfa-button>
-  <fpsfa-button appearance="primary" disabled>Disabled state</fpsfa-button>
-  <fpsfa-button appearance="primary" disabled-focusable
+  <fpsfa-button appearance="filled">Enabled state</fpsfa-button>
+  <fpsfa-button appearance="filled" disabled>Disabled state</fpsfa-button>
+  <fpsfa-button appearance="filled" disabled-focusable
     >Disabled focusable state</fpsfa-button
   >
 `);

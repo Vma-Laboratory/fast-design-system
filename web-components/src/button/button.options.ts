@@ -5,11 +5,10 @@ import {  ValuesOf } from '@microsoft/fast-foundation';
  * @public
  */
 export const ButtonAppearance = {
-  primary: 'primary',
+  filled: 'filled',
   outline: 'outline',
-  subtle: 'subtle',
-  secondary: 'secondary',
-  transparent: 'transparent',
+  ghost: 'ghost',
+  text: 'text'
 } as const;
 
 /**

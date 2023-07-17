@@ -53,6 +53,7 @@ module.exports = function () {
             {
               destination: `themes/${brand}Theme.ts`,
               format: "fast/design-tokens-theme-values",
+              filter: (token) => token.type === "color",
             },
           ],
           transforms: ["name/cti/camel"],
@@ -97,6 +98,7 @@ module.exports = function () {
           {
             destination: `types/theme.type.ts`,
             format: "fast/design-tokens-theme-types",
+            filter: (token) => token.type === "color",
           },
         ],
         transforms: ["name/cti/camel"],

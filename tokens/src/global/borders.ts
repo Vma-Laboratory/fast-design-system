@@ -3,8 +3,8 @@
 import { Borders } from "../types/borders.type";
 
 export const borders: Borders = {
-	fpsfaBorderRadiusSm: "4",
-	fpsfaBorderRadiusLg: "8",
-	fpsfaBorderRadiusXl: "16",
+	fpsfaBorderRadiusSm: "4px",
+	fpsfaBorderRadiusLg: "8px",
+	fpsfaBorderRadiusXl: "16px",
 	fpsfaBorderRadiusMultiValue: "4 8"
 }

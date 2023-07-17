@@ -1,8 +1,9 @@
 import type { Preview } from "@storybook/web-components";
-import { switchTheme } from "../public/theme-switch.js";
+import { switchTheme, InitializeTheme } from "../public/theme-switch.js";
 import { DesignToken } from "@microsoft/fast-foundation";
 
 DesignToken.registerDefaultStyleTarget();
+InitializeTheme();
 
 function changeTheme(e: Event) {
   console.log({ e });

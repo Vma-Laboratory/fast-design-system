@@ -2,6 +2,11 @@
 const StyleDictionaryPackage = require("style-dictionary");
 const global = require("../figma/output/global.json");
 
+function _addUnitForSizes(value, unit = "px") {
+  if (isNaN(Number(value))) return value;
+  return value + unit;
+}
+
 module.exports = function () {
   /**
    * Custom format that generate javascript dictionnaries containing all global styles values per category
@@ -17,11 +22,13 @@ module.exports = function () {
         `import { ${categoryTypeName} } from "../types/${categoryName}.type";\n\n` +
         `export const ${categoryName}: ${categoryTypeName} = ` +
         `{\n${dictionary.allProperties
-          .map((token) => `\t${token.name}: "${token.value}"`)
+          .map((token) => `\t${token.name}: "${_addUnitForSizes(token.value)}"`)
           .join(",\n")}\n}`
       );
     },
   });
+
+
 
   /**
    * Custom format that generate javascript dictionnaries containing all global styles types per category

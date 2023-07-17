@@ -3,17 +3,17 @@
 import { Spacings } from "../types/spacings.type";
 
 export const spacings: Spacings = {
-	fpsfaDimensionScale: "2",
-	fpsfaDimensionXs: "4",
-	fpsfaDimensionSm: "8",
-	fpsfaDimensionMd: "16",
-	fpsfaDimensionLg: "32",
-	fpsfaDimensionXl: "64",
-	fpsfaSpacingXs: "4",
-	fpsfaSpacingSm: "8",
-	fpsfaSpacingMd: "16",
-	fpsfaSpacingLg: "32",
-	fpsfaSpacingXl: "64",
+	fpsfaDimensionScale: "2px",
+	fpsfaDimensionXs: "4px",
+	fpsfaDimensionSm: "8px",
+	fpsfaDimensionMd: "16px",
+	fpsfaDimensionLg: "32px",
+	fpsfaDimensionXl: "64px",
+	fpsfaSpacingXs: "4px",
+	fpsfaSpacingSm: "8px",
+	fpsfaSpacingMd: "16px",
+	fpsfaSpacingLg: "32px",
+	fpsfaSpacingXl: "64px",
 	fpsfaSpacingMultiValue: "8 64",
 	fpsfaParagraphIndent0: "0px"
 }
