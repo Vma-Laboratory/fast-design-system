@@ -38,6 +38,7 @@ export type ButtonShape = ValuesOf<typeof ButtonShape>;
  * @public
  */
 export const ButtonSize = {
+  tiny: 'tiny',
   small: 'small',
   medium: 'medium',
   large: 'large',

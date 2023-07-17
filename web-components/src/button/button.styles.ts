@@ -52,7 +52,9 @@ import {
   fpsfaBorderRadiusSm,
   fpsfaBorderRadiusLg,
   fpsfaBorderRadiusXl,
-  fpsfaButtonSFontFamily,
+  fpsfaButtonTFontWeight,
+  fpsfaButtonTFontSize,
+  fpsfaButtonTLineHeight,
   fpsfaButtonSFontWeight,
   fpsfaButtonSFontSize,
   fpsfaButtonSLineHeight,
@@ -60,7 +62,6 @@ import {
   fpsfaButtonMFontWeight,
   fpsfaButtonMFontSize,
   fpsfaButtonMLineHeight,
-  fpsfaButtonLFontFamily,
   fpsfaButtonLFontWeight,
   fpsfaButtonLFontSize,
   fpsfaButtonLLineHeight,
@@ -91,6 +92,7 @@ export const styles = css`
     min-width: 96px;
     border-radius: ${fpsfaBorderRadiusXl};
     font-size: ${fpsfaButtonMFontSize};
+    line-height: ${fpsfaButtonMLineHeight};
     font-family: ${fpsfaButtonMFontFamily};
     font-weight: ${fpsfaButtonMFontWeight};
     text-transform: uppercase;
@@ -145,6 +147,24 @@ export const styles = css`
     max-width: 32px;
   }
 
+  :host([size="tiny"]) {
+    --icon-spacing: 1rem;
+  }
+
+  :host([size="tiny"]) .control {
+    min-height: 24px;
+    min-width: 64px;
+    padding: 0.5rem 1.688rem;
+    font-size: ${fpsfaButtonTFontSize};
+    line-height: ${fpsfaButtonTLineHeight};
+    font-weight: ${fpsfaButtonTFontWeight};
+  }
+
+  :host([size="tiny"][icon-only]) .control {
+    min-width: 24px;
+    max-width: 24px;
+  }
+
   :host([size="small"]) {
     --icon-spacing: 1rem;
   }
@@ -152,6 +172,7 @@ export const styles = css`
   :host([size="small"]) .control {
     min-height: 24px;
     min-width: 64px;
+    border-radius: ${fpsfaBorderRadiusSm};
     padding: 0.75rem 2.438rem;
     font-size: ${fpsfaButtonSFontSize};
     line-height: ${fpsfaButtonSLineHeight};
@@ -169,6 +190,7 @@ export const styles = css`
     padding: 1.25rem 3.25rem;
     font-size: ${fpsfaButtonLFontSize};
     line-height: ${fpsfaButtonLLineHeight};
+    font-weight: ${fpsfaButtonLFontWeight};
   }
 
   :host([size="large"][icon-only]) .control {
@@ -206,9 +228,9 @@ export const styles = css`
     border-color: ${fpsfaThemeButtonFilledBorderPressed};
   }
 
-  :host(is:([disabled][appearance='filled'], [disabled-focusabale][appearance="filled"])) .control,
-:host(is:([disabled][appearance='filled'], [disabled-focusabale][appearance="filled"]):hover) .control,
-:host(is:([disabled][appearance='filled'], [disabled-focusabale][appearance="filled"]):hover:active) .control {
+  :host(:is([disabled][appearance='filled'], [disabled-focusable][appearance="filled"])) .control,
+:host(:is([disabled][appearance='filled'], [disabled-focusable][appearance="filled"]):hover) .control,
+:host(:is([disabled][appearance='filled'], [disabled-focusable][appearance="filled"]):hover:active) .control {
     background-color: ${fpsfaThemeButtonFilledStatesDisable};
     color: ${fpsfaThemeButtonFilledTextDisable};
     border-color: ${fpsfaThemeButtonFilledBorderDisable};
@@ -232,9 +254,9 @@ export const styles = css`
     border-color: ${fpsfaThemeButtonOutlineBorderPressed};
   }
 
-  :host(is:([disabled][appearance='outline'], [disabled-focusabale][appearance="outline"])) .control,
-:host(is:([disabled][appearance='outline'], [disabled-focusabale][appearance="outline"]):hover) .control,
-:host(is:([disabled][appearance='outline'], [disabled-focusabale][appearance="outline"]):hover:active) .control {
+  :host(:is([disabled][appearance='outline'], [disabled-focusable][appearance="outline"])) .control,
+  :host(:is([disabled][appearance='outline'], [disabled-focusable][appearance="outline"]):hover) .control,
+  :host(:is([disabled][appearance='outline'], [disabled-focusable][appearance="outline"]):hover:active) .control {
     background-color: ${fpsfaThemeButtonOutlineStatesDisable};
     color: ${fpsfaThemeButtonOutlineTextDisable};
     border-color: ${fpsfaThemeButtonOutlineBorderDisable};
@@ -258,10 +280,11 @@ export const styles = css`
     border-color: ${fpsfaThemeButtonGhostBorderPressed};
   }
 
-  :host(is:([disabled][appearance='ghost'], [disabled-focusabale][appearance="ghost"])) .control,
-:host(is:([disabled][appearance='ghost'], [disabled-focusabale][appearance="ghost"]):hover) .control,
-:host(is:([disabled][appearance='ghost'], [disabled-focusabale][appearance="ghost"]):hover:active) .control {
+  :host(:is([disabled][appearance='ghost'], [disabled-focusable][appearance='ghost'])) .control,
+  :host(:is([disabled][appearance='ghost'], [disabled-focusable][appearance='ghost']):hover) .control,
+  :host(:is([disabled][appearance='ghost'], [disabled-focusable][appearance='ghost']):hover:active) .control {
     background-color: ${fpsfaThemeButtonGhostStatesDisable};
+    color: ${fpsfaThemeButtonGhostTextDisable};
     border-color: ${fpsfaThemeButtonGhostBorderDisable};
   }
 
@@ -291,10 +314,11 @@ export const styles = css`
     border-color: ${fpsfaThemeButtonTextBorderPressed};
   }
 
-  :host(is:([disabled][appearance='text'], [disabled-focusabale][appearance="text"])) .control,
-  :host(is:([disabled][appearance='text'], [disabled-focusabale][appearance="text"]):hover) .control,
-  :host(is:([disabled][appearance='text'], [disabled-focusabale][appearance="text"]):hover:active) .control {
+  :host(:is([disabled][appearance='text'], [disabled-focusable][appearance="text"])) .control,
+  :host(:is([disabled][appearance='text'], [disabled-focusable][appearance="text"]):hover) .control,
+  :host(:is([disabled][appearance='text'], [disabled-focusable][appearance="text"]):hover:active) .control {
     background-color: ${fpsfaThemeButtonTextStatesDisable};
+    color: ${fpsfaThemeButtonTextTextDisable};
     border-color: ${fpsfaThemeButtonTextBorderDisable};
   }
 
@@ -314,5 +338,12 @@ export const styles = css`
   :host([shape="square"]) .control,
   :host([shape="square"]) .control:focus-visible {
     border-radius: 0px;
+  }
+
+  :host(:is([disabled], [disabled-focusable], [appearance][disabled], [appearance][disabled-focusable])) .control,
+  :host(:is([disabled], [disabled-focusable], [appearance][disabled], [appearance][disabled-focusable]):hover) .control,
+  :host(:is([disabled], [disabled-focusable], [appearance][disabled], [appearance][disabled-focusable]):hover:active)
+    .control {
+    cursor: not-allowed;
   }
 `;
