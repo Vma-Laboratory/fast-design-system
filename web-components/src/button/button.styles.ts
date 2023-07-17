@@ -56,17 +56,14 @@ import {
   fpsfaButtonSFontWeight,
   fpsfaButtonSFontSize,
   fpsfaButtonSLineHeight,
-  fpsfaButtonSLetterSpacing,
   fpsfaButtonMFontFamily,
   fpsfaButtonMFontWeight,
   fpsfaButtonMFontSize,
   fpsfaButtonMLineHeight,
-  fpsfaButtonMLetterSpacing,
   fpsfaButtonLFontFamily,
   fpsfaButtonLFontWeight,
   fpsfaButtonLFontSize,
   fpsfaButtonLLineHeight,
-  fpsfaButtonLLetterSpacing
 } from "@design-system/tokens";
 
 // Need to support icon hover styles
@@ -89,13 +86,14 @@ export const styles = css`
     outline-style: none;
     background-color: ${fpsfaThemeButtonFilledStatesDefault};
     color: ${fpsfaThemeButtonFilledTextDefault};
-    border: 0 solid ${fpsfaThemeButtonFilledBorderDefault};
-    padding: 1.25rem ${fpsfaButtonMLetterSpacing};
+    border: 2px solid ${fpsfaThemeButtonFilledBorderDefault};
+    padding: 1rem 2.938rem;
     min-width: 96px;
     border-radius: ${fpsfaBorderRadiusXl};
     font-size: ${fpsfaButtonMFontSize};
     font-family: ${fpsfaButtonMFontFamily};
     font-weight: ${fpsfaButtonMFontWeight};
+    text-transform: uppercase;
     cursor: pointer;
   }
 
@@ -120,7 +118,7 @@ export const styles = css`
     border-color: ${fpsfaThemeButtonFilledTextPressed};
     outline: 1px solid ${fpsfaThemeButtonFilledBorderPressed};
   }
-  
+
   @media screen and (prefers-reduced-motion: reduce) {
     transition-duration: 0.01ms;
   }
@@ -154,7 +152,7 @@ export const styles = css`
   :host([size="small"]) .control {
     min-height: 24px;
     min-width: 64px;
-    padding: 0 ${fpsfaButtonSLetterSpacing};
+    padding: 0.75rem 2.438rem;
     font-size: ${fpsfaButtonSFontSize};
     line-height: ${fpsfaButtonSLineHeight};
     font-weight: ${fpsfaButtonSFontWeight};
@@ -168,7 +166,7 @@ export const styles = css`
   :host([size="large"]) .control {
     min-height: 40px;
     border-radius: ${fpsfaBorderRadiusLg};
-    padding: 0 ${fpsfaButtonLLetterSpacing};
+    padding: 1.25rem 3.25rem;
     font-size: ${fpsfaButtonLFontSize};
     line-height: ${fpsfaButtonLLineHeight};
   }
@@ -184,139 +182,137 @@ export const styles = css`
     width: 24px;
   }
 
-  :host([appearance='filled']) .control {
-  background-color: ${fpsfaThemeButtonFilledStatesDefault};
-  color: ${fpsfaThemeButtonFilledTextDefault};
-  border-color: transparent;
-}
+  :host([appearance="filled"]) .control {
+    background-color: ${fpsfaThemeButtonFilledStatesDefault};
+    color: ${fpsfaThemeButtonFilledTextDefault};
+    border-color: transparent;
+  }
 
-:host([appearance='filled']:hover) .control {
-  background-color: ${fpsfaThemeButtonFilledStatesHover};
-}
+  :host([appearance="filled"]:hover) .control {
+    background-color: ${fpsfaThemeButtonFilledStatesHover};
+  }
 
-:host([appearance='filled']:hover) .control,
-:host([appearance='filled']:hover:active) .control {
-  border-color: transparent;
-  color: ${fpsfaThemeButtonFilledTextHover};
-}
+  :host([appearance="filled"]:hover) .control,
+  :host([appearance="filled"]:hover:active) .control {
+    border-color: transparent;
+    color: ${fpsfaThemeButtonFilledTextHover};
+  }
 
-:host([appearance='filled']:hover:active) .control {
-  background-color: ${fpsfaThemeButtonFilledStatesPressed};
-}
+  :host([appearance="filled"]:hover:active) .control {
+    background-color: ${fpsfaThemeButtonFilledStatesPressed};
+  }
 
-:host([appearance='filled']) .control:focus-visible {
-  border-color: ${fpsfaThemeButtonFilledBorderPressed};
-}
+  :host([appearance="filled"]) .control:focus-visible {
+    border-color: ${fpsfaThemeButtonFilledBorderPressed};
+  }
 
-:host(is:([disabled][appearance='filled'], [disabled-focusabale][appearance="filled"])) .control,
+  :host(is:([disabled][appearance='filled'], [disabled-focusabale][appearance="filled"])) .control,
 :host(is:([disabled][appearance='filled'], [disabled-focusabale][appearance="filled"]):hover) .control,
 :host(is:([disabled][appearance='filled'], [disabled-focusabale][appearance="filled"]):hover:active) .control {
-  background-color: ${fpsfaThemeButtonFilledStatesDisable};
-  color: ${fpsfaThemeButtonFilledTextDisable};
-  border-color: ${fpsfaThemeButtonFilledBorderDisable};
-}
+    background-color: ${fpsfaThemeButtonFilledStatesDisable};
+    color: ${fpsfaThemeButtonFilledTextDisable};
+    border-color: ${fpsfaThemeButtonFilledBorderDisable};
+  }
 
-:host([appearance='outline']) .control {
-  background-color: ${fpsfaThemeButtonOutlineStatesDefault};
-  color: ${fpsfaThemeButtonOutlineTextDefault};
-  border-color: ${fpsfaThemeButtonOutlineBorderDefault};
-}
+  :host([appearance="outline"]) .control {
+    background-color: ${fpsfaThemeButtonOutlineStatesDefault};
+    color: ${fpsfaThemeButtonOutlineTextDefault};
+    border-color: ${fpsfaThemeButtonOutlineBorderDefault};
+  }
 
-:host([appearance='outline']:hover) .control {
-  background-color: ${fpsfaThemeButtonOutlineStatesHover};
-  color: ${fpsfaThemeButtonOutlineTextHover};
-  border-color: ${fpsfaThemeButtonOutlineBorderHover};
-}
+  :host([appearance="outline"]:hover) .control {
+    background-color: ${fpsfaThemeButtonOutlineStatesHover};
+    color: ${fpsfaThemeButtonOutlineTextHover};
+    border-color: ${fpsfaThemeButtonOutlineBorderHover};
+  }
 
-:host([appearance='outline']:hover:active) .control {
-  color: ${fpsfaThemeButtonOutlineTextPressed};
-  background-color: ${fpsfaThemeButtonOutlineStatesPressed};
-  border-color: ${fpsfaThemeButtonOutlineBorderPressed};
-}
+  :host([appearance="outline"]:hover:active) .control {
+    color: ${fpsfaThemeButtonOutlineTextPressed};
+    background-color: ${fpsfaThemeButtonOutlineStatesPressed};
+    border-color: ${fpsfaThemeButtonOutlineBorderPressed};
+  }
 
-:host(is:([disabled][appearance='outline'], [disabled-focusabale][appearance="outline"])) .control,
+  :host(is:([disabled][appearance='outline'], [disabled-focusabale][appearance="outline"])) .control,
 :host(is:([disabled][appearance='outline'], [disabled-focusabale][appearance="outline"]):hover) .control,
 :host(is:([disabled][appearance='outline'], [disabled-focusabale][appearance="outline"]):hover:active) .control {
-  background-color: ${fpsfaThemeButtonOutlineStatesDisable};
-  color: ${fpsfaThemeButtonOutlineTextDisable};
-  border-color: ${fpsfaThemeButtonOutlineBorderDisable};
-}
+    background-color: ${fpsfaThemeButtonOutlineStatesDisable};
+    color: ${fpsfaThemeButtonOutlineTextDisable};
+    border-color: ${fpsfaThemeButtonOutlineBorderDisable};
+  }
 
-:host([appearance='ghost']) .control {
-  background-color: ${fpsfaThemeButtonGhostStatesDefault};
-  color: ${fpsfaThemeButtonGhostTextDefault};
-  border-color: ${fpsfaThemeButtonGhostBorderDefault};
-}
+  :host([appearance="ghost"]) .control {
+    background-color: ${fpsfaThemeButtonGhostStatesDefault};
+    color: ${fpsfaThemeButtonGhostTextDefault};
+    border-color: ${fpsfaThemeButtonGhostBorderDefault};
+  }
 
-:host([appearance='ghost']:hover) .control {
-  background-color: ${fpsfaThemeButtonGhostStatesHover};
-  color: ${fpsfaThemeButtonGhostTextHover};
-  border-color: ${fpsfaThemeButtonGhostBorderHover};
-}
+  :host([appearance="ghost"]:hover) .control {
+    background-color: ${fpsfaThemeButtonGhostStatesHover};
+    color: ${fpsfaThemeButtonGhostTextHover};
+    border-color: ${fpsfaThemeButtonGhostBorderHover};
+  }
 
-:host([appearance='ghost']:hover:active) .control {
-  background-color: ${fpsfaThemeButtonGhostStatesPressed};
-  color: ${fpsfaThemeButtonGhostTextPressed};
-  border-color: ${fpsfaThemeButtonGhostBorderPressed};
-}
+  :host([appearance="ghost"]:hover:active) .control {
+    background-color: ${fpsfaThemeButtonGhostStatesPressed};
+    color: ${fpsfaThemeButtonGhostTextPressed};
+    border-color: ${fpsfaThemeButtonGhostBorderPressed};
+  }
 
-:host(is:([disabled][appearance='ghost'], [disabled-focusabale][appearance="ghost"])) .control,
+  :host(is:([disabled][appearance='ghost'], [disabled-focusabale][appearance="ghost"])) .control,
 :host(is:([disabled][appearance='ghost'], [disabled-focusabale][appearance="ghost"]):hover) .control,
 :host(is:([disabled][appearance='ghost'], [disabled-focusabale][appearance="ghost"]):hover:active) .control {
-  background-color: ${fpsfaThemeButtonGhostStatesDisable};
-  border-color: ${fpsfaThemeButtonGhostBorderDisable};
-}
+    background-color: ${fpsfaThemeButtonGhostStatesDisable};
+    border-color: ${fpsfaThemeButtonGhostBorderDisable};
+  }
 
-:host([appearance='ghost']:hover) ::slotted(svg) {
-  fill: ${fpsfaThemeButtonGhostTextHover};
-}
+  :host([appearance="ghost"]:hover) ::slotted(svg) {
+    fill: ${fpsfaThemeButtonGhostTextHover};
+  }
 
-:host([appearance='ghost']:hover:active) ::slotted(svg) {
-  fill: ${fpsfaThemeButtonGhostTextPressed};
-}
+  :host([appearance="ghost"]:hover:active) ::slotted(svg) {
+    fill: ${fpsfaThemeButtonGhostTextPressed};
+  }
 
-:host([appearance='text']) .control {
-  background-color: ${fpsfaThemeButtonTextStatesDefault};
-  color: ${fpsfaThemeButtonTextTextDefault};
-  border-color: ${fpsfaThemeButtonTextBorderDefault};
-}
+  :host([appearance="text"]) .control {
+    background-color: ${fpsfaThemeButtonTextStatesDefault};
+    color: ${fpsfaThemeButtonTextTextDefault};
+    border-color: ${fpsfaThemeButtonTextBorderDefault};
+  }
 
-:host([appearance='text']:hover) .control {
-  background-color: ${fpsfaThemeButtonTextStatesHover};
-  color: ${fpsfaThemeButtonTextTextHover};
-  border-color: ${fpsfaThemeButtonTextBorderHover};
-}
+  :host([appearance="text"]:hover) .control {
+    background-color: ${fpsfaThemeButtonTextStatesHover};
+    color: ${fpsfaThemeButtonTextTextHover};
+    border-color: ${fpsfaThemeButtonTextBorderHover};
+  }
 
-:host([appearance='text']:hover:active) .control {
-  background-color: ${fpsfaThemeButtonTextStatesPressed};
-  color: ${fpsfaThemeButtonTextTextPressed};
-  border-color: ${fpsfaThemeButtonTextBorderPressed};
-}
+  :host([appearance="text"]:hover:active) .control {
+    background-color: ${fpsfaThemeButtonTextStatesPressed};
+    color: ${fpsfaThemeButtonTextTextPressed};
+    border-color: ${fpsfaThemeButtonTextBorderPressed};
+  }
 
-:host(is:([disabled][appearance='text'], [disabled-focusabale][appearance="text"])) .control,
-:host(is:([disabled][appearance='text'], [disabled-focusabale][appearance="text"]):hover) .control,
-:host(is:([disabled][appearance='text'], [disabled-focusabale][appearance="text"]):hover:active) .control {
-  background-color: ${fpsfaThemeButtonTextStatesDisable};
-  border-color: ${fpsfaThemeButtonTextBorderDisable};
-}
+  :host(is:([disabled][appearance='text'], [disabled-focusabale][appearance="text"])) .control,
+  :host(is:([disabled][appearance='text'], [disabled-focusabale][appearance="text"]):hover) .control,
+  :host(is:([disabled][appearance='text'], [disabled-focusabale][appearance="text"]):hover:active) .control {
+    background-color: ${fpsfaThemeButtonTextStatesDisable};
+    border-color: ${fpsfaThemeButtonTextBorderDisable};
+  }
 
-:host([appearance='text']:hover) ::slotted(svg) {
-  fill: ${fpsfaThemeButtonTextTextHover};
-}
+  :host([appearance="text"]:hover) ::slotted(svg) {
+    fill: ${fpsfaThemeButtonTextTextHover};
+  }
 
-:host([appearance='text']:hover:active) ::slotted(svg) {
-  fill: ${fpsfaThemeButtonTextTextPressed};
-}
+  :host([appearance="text"]:hover:active) ::slotted(svg) {
+    fill: ${fpsfaThemeButtonTextTextPressed};
+  }
 
+  :host([shape="circular"]) .control,
+  :host([shape="circular"]) .control:focus-visible {
+    border-radius: 400px;
+  }
+
+  :host([shape="square"]) .control,
+  :host([shape="square"]) .control:focus-visible {
+    border-radius: 0px;
+  }
 `;
-
-// :host([shape='circular']) .control,
-// :host([shape='circular']) .control:focus-visible {
-//   border-radius: ${borderRadiusCircular};
-// }
-
-// :host([shape='square']) .control,
-// :host([shape='square']) .control:focus-visible {
-//   border-radius: ${borderRadiusNone};
-// }
-

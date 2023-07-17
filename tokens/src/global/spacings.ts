@@ -3,12 +3,12 @@
 import { Spacings } from "../types/spacings.type";
 
 export const spacings: Spacings = {
-	fpsfaDimensionScale: "2px",
-	fpsfaDimensionXs: "4px",
-	fpsfaDimensionSm: "8px",
-	fpsfaDimensionMd: "16px",
-	fpsfaDimensionLg: "32px",
-	fpsfaDimensionXl: "64px",
+	fpsfaDimensionScale: "2",
+	fpsfaDimensionXs: "4",
+	fpsfaDimensionSm: "8",
+	fpsfaDimensionMd: "16",
+	fpsfaDimensionLg: "32",
+	fpsfaDimensionXl: "64",
 	fpsfaSpacingXs: "4px",
 	fpsfaSpacingSm: "8px",
 	fpsfaSpacingMd: "16px",

@@ -2,9 +2,18 @@
 const StyleDictionaryPackage = require("style-dictionary");
 const global = require("../figma/output/global.json");
 
-function _addUnitForSizes(value, unit = "px") {
-  if (isNaN(Number(value))) return value;
-  return value + unit;
+function _addUnitForSizes(token, unit = "px") {
+  const typesWithUnit = [
+    "letterSpacing",
+    "lineHeights",
+    "borderRadius",
+    "spacing",
+    "paragraphSpacing",
+    "fontSizes",
+  ];
+  if (!typesWithUnit.includes(token.type)) return token.value;
+  if (isNaN(Number(token.value))) return token.value;
+  return token.value + unit;
 }
 
 module.exports = function () {
@@ -22,13 +31,11 @@ module.exports = function () {
         `import { ${categoryTypeName} } from "../types/${categoryName}.type";\n\n` +
         `export const ${categoryName}: ${categoryTypeName} = ` +
         `{\n${dictionary.allProperties
-          .map((token) => `\t${token.name}: "${_addUnitForSizes(token.value)}"`)
+          .map((token) => `\t${token.name}: "${_addUnitForSizes(token)}"`)
           .join(",\n")}\n}`
       );
     },
   });
-
-
 
   /**
    * Custom format that generate javascript dictionnaries containing all global styles types per category

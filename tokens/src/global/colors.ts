@@ -5,7 +5,7 @@ import { GlobalColors } from "../types/colors.type";
 export const colors: GlobalColors = {
 	fpsfa100: "#ffffff",
 	fpsfaColorsWhite: "#ffffff",
-	fpsfaColorsTransparent: "#D9D9D9",
+	fpsfaColorsTransparent: "#ffffff00",
 	fpsfaColorsBlack: "#000000",
 	fpsfaColorsDefault50: "#cfd1d4",
 	fpsfaColorsDefault100: "#b2b6bb",

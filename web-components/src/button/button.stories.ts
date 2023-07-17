@@ -200,11 +200,19 @@ export const Disabled = renderComponent(html<ButtonStoryArgs>`
   <fpsfa-button>Enabled state</fpsfa-button>
   <fpsfa-button disabled>Disabled state</fpsfa-button>
   <fpsfa-button disabled-focusable>Disabled focusable state</fpsfa-button>
-  <fpsfa-button appearance="filled">Enabled state</fpsfa-button>
-  <fpsfa-button appearance="filled" disabled>Disabled state</fpsfa-button>
-  <fpsfa-button appearance="filled" disabled-focusable
+  <fpsfa-button appearance="outline">Enabled state</fpsfa-button>
+  <fpsfa-button appearance="outline" disabled>Disabled state</fpsfa-button>
+  <fpsfa-button appearance="outline" disabled-focusable
     >Disabled focusable state</fpsfa-button
   >
+  <fpsfa-button appearance="ghost">Enabled state</fpsfa-button>
+  <fpsfa-button appearance="ghost" disabled>Disabled state</fpsfa-button>
+  <fpsfa-button appearance="ghost" disabled-focusable
+    >Disabled focusable state</fpsfa-button>
+    <fpsfa-button appearance="text">Enabled state</fpsfa-button>
+  <fpsfa-button appearance="text" disabled>Disabled state</fpsfa-button>
+  <fpsfa-button appearance="text" disabled-focusable
+    >Disabled focusable state</fpsfa-button>
 `);
 
 export const WithLongText = renderComponent(html<ButtonStoryArgs>`
