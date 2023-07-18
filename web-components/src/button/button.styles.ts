@@ -228,9 +228,9 @@ export const styles = css`
     border-color: ${fpsfaThemeButtonFilledBorderPressed};
   }
 
-  :host(:is([disabled][appearance='filled'], [disabled-focusable][appearance="filled"])) .control,
-:host(:is([disabled][appearance='filled'], [disabled-focusable][appearance="filled"]):hover) .control,
-:host(:is([disabled][appearance='filled'], [disabled-focusable][appearance="filled"]):hover:active) .control {
+  :host(:is([disabled], [disabled-focusable], [disabled][appearance='filled'], [disabled-focusable][appearance="filled"])) .control,
+  :host(:is([disabled], [disabled-focusable], [disabled][appearance='filled'], [disabled-focusable][appearance="filled"]):hover) .control,
+  :host(:is([disabled], [disabled-focusable], [disabled][appearance='filled'], [disabled-focusable][appearance="filled"]):hover:active) .control {
     background-color: ${fpsfaThemeButtonFilledStatesDisable};
     color: ${fpsfaThemeButtonFilledTextDisable};
     border-color: ${fpsfaThemeButtonFilledBorderDisable};
@@ -344,6 +344,6 @@ export const styles = css`
   :host(:is([disabled], [disabled-focusable], [appearance][disabled], [appearance][disabled-focusable]):hover) .control,
   :host(:is([disabled], [disabled-focusable], [appearance][disabled], [appearance][disabled-focusable]):hover:active)
     .control {
-    cursor: not-allowed;
+      cursor: not-allowed;
   }
 `;

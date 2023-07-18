@@ -4,7 +4,7 @@ import { styles } from './button.styles';
 import { template } from './button.template';
 
 /**
- * The Fluent Button Element. Implements {@link @microsoft/fast-foundation#Button },
+ * The Fpsfa Button Element. Implements {@link @microsoft/fast-foundation#Button },
  * {@link @microsoft/fast-foundation#buttonTemplate}
  *
  * @public

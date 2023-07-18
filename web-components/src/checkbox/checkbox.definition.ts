@@ -4,7 +4,7 @@ import { styles } from './checkbox.styles';
 import { template } from './checkbox.template';
 
 /**
- * The Fluent Button Element. Implements {@link @microsoft/fast-foundation#Checkbox },
+ * The Fpsfa Button Element. Implements {@link @microsoft/fast-foundation#Checkbox },
  * {@link @microsoft/fast-foundation#checkboxTemplate}
  *
  * @public

@@ -4,7 +4,7 @@ import { styles } from './listbox-option.styles';
 import { template } from './listbox-option.template';
 
 /**
- * The Fluent ListboxOption Element. Implements {@link @microsoft/fast-foundation#ListboxOption },
+ * The Fpsfa ListboxOption Element. Implements {@link @microsoft/fast-foundation#ListboxOption },
  * {@link @microsoft/fast-foundation#listbox-optionTemplate}
  *
  * @public

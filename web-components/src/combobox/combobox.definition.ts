@@ -4,7 +4,7 @@ import { styles } from './combobox.styles';
 import { template } from './combobox.template';
 
 /**
- * The Fluent Combobox Element. Implements {@link @microsoft/fast-foundation#Combobox },
+ * The Fpsfa Combobox Element. Implements {@link @microsoft/fast-foundation#Combobox },
  * {@link @microsoft/fast-foundation#comboboxTemplate}
  *
  * @public
