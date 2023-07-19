@@ -12,7 +12,7 @@ export const ButtonAppearance = {
 } as const;
 
 /**
- * A Button can be secondary, primary, outline, subtle, transparent
+ * A Button can be secondary, primary, outline, ghost, transparent
  * @public
  */
 export type ButtonAppearance = ValuesOf<typeof ButtonAppearance>;

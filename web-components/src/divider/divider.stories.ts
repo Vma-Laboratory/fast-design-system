@@ -165,7 +165,7 @@ export const Appearance = renderComponent(html<DividerStoryArgs>`
   <div>
     <fpsfa-divider appearance="strong"><div>strong</div></fpsfa-divider>
     <fpsfa-divider appearance="brand"><div>brand</div></fpsfa-divider>
-    <fpsfa-divider appearance="ghost"><div>subtle</div></fpsfa-divider>
+    <fpsfa-divider appearance="subtle"><div>subtle</div></fpsfa-divider>
     <fpsfa-divider appearance="default"><div>default</div></fpsfa-divider>
   </div>
 `);

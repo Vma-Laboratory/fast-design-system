@@ -76,7 +76,7 @@ const tabsAppearance = html`
     <fpsfa-tab-panel></fpsfa-tab-panel>
     <fpsfa-tab-panel></fpsfa-tab-panel>
   </fpsfa-tabs>
-  <fpsfa-tabs appearance="ghost">
+  <fpsfa-tabs appearance="subtle">
     <fpsfa-tab active> First Tab </fpsfa-tab>
     <fpsfa-tab> Second Tab</fpsfa-tab>
     <fpsfa-tab> Third Tab</fpsfa-tab>

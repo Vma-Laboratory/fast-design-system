@@ -8,7 +8,7 @@ import { ButtonAppearance, ButtonShape, ButtonSize } from '../button/button.opti
 export const CompoundButtonAppearance = ButtonAppearance;
 
 /**
- * A Compound Button can be secondary, primary, outline, subtle, transparent
+ * A Compound Button can be secondary, primary, outline, ghost, transparent
  * @public
  */
 export type CompoundButtonAppearance = ValuesOf<typeof CompoundButtonAppearance>;
