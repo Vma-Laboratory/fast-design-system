@@ -1,7 +1,7 @@
 import { DesignSystem } from '../design-system';
-import { TextInput } from './text-input.js';
-import { styles } from './text-input.styles.js';
-import { template } from './text-input.template.js';
+import { TextInput } from './text-input';
+import { styles } from './text-input.styles';
+import { template } from './text-input.template';
 
 /**
  * The Fpsfa TextInput Element.

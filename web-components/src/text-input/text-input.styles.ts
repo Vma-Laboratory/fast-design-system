@@ -53,7 +53,7 @@ export const styles = css`
 //   spacingHorizontalXXS,
 //   spacingVerticalXS,
 //   strokeWidthThin,
-// } from '../theme/design-tokens.js';
+// } from '../theme/design-tokens';
 
 // /** TextInput styles
 //  * @public
